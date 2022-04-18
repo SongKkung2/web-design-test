@@ -1,0 +1,113 @@
+@charset "utf-8";
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font: 16px/1.5 'dotum', 'gulim';
+    color: #333;
+    background: #fff;
+}
+a, a:link{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+.d-none{
+    display: none;
+}
+#popup{
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.popup-box{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background: white;
+    color: black;
+}
+.wrap{
+    width: 1000px;
+    height: 650px;
+    overflow: hidden;
+}
+.column-left{
+    width: 25%;
+    float: left;
+}
+.lnb{
+    display: none;
+}
+.column-right{
+    width: 75%;
+    float: right;
+}
+.slide{
+    height: 350px;
+    position: relative;
+}
+.slide > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.slide > div > p {
+    margin: 1rem;
+}
+.slide > div:nth-child(1){
+    background: url(../images/slide1.jpg) no-repeat center / cover;
+}
+.slide > div:nth-child(2){
+    background: url(../images/slide2.jpg) no-repeat center / cover;
+}
+.slide > div:nth-child(3){
+    background: url(../images/slide3.jpg) no-repeat center / cover;
+}
+.top{
+    z-index: 1;
+    opacity: 1;
+}
+.contents{
+    display: flex;
+    height: 200px;
+}
+.news, .gallery, .icons{
+    flex: 1;
+} 
+.news ul{
+    font-size: .825rem;
+}
+.gallery ul {
+    display: flex;
+}
+.gallery img{
+    max-width: 100%;
+}
+.icons ul {
+    display: flex;
+}
+.footer{
+    height: 100px;
+    display: flex;
+}
+.copy{
+    flex: 8;
+}
+.info{
+    flex: 2;
+}
