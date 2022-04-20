@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+}
+a, a:link{
+    color: inherit;
+    text-decoration: none;
+}
+ul, ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #fff;
+    color: #333;
+    font: 16px/1.5 dotum, gulim;
+}
+.d-none{
+    display: none;
+}
+#popup {
+    width: 500px;
+    height: 400px;
+    padding: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+    color: black;
+    border: 2px solid sandybrown;
+    box-shadow: 0 0 10px rgb(138, 138, 138);
+    z-index: 1000;
+}
+#popup h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#popup p{
+    font-size: .825rem;
+    margin: 1rem 0;
+}
+#popup button{
+    position: absolute;
+    right: 10%;
+    border: 0;
+    padding: .8rem 2rem;
+    color: white;
+    background-color: #f4a460;
+    font-size: 1rem;
+}
+/* popup */
+.wrap{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+    overflow: hidden;
+}
+.left{
+    width: 200px;
+}
+.header{
+    width: 200px;
+}
+.logo{
+    padding: 10px;
+}
+.logo img{
+    width: 100%;
+}
+.gnb{
+    text-align: center;
+}
+.lnb{
+    display: none;
+}
+/* header */
+.right{
+    width: 800px;
+}
+.slide{
+    height: 350px;
+    overflow: hidden;
+}
+.items{
+    display: flex;
+    font-size: 0;
+    transition: all ease-in-out .3s;
+}
+.contents{
+    height: 200px;
+    display: flex;
+    overflow: hidden;
+    column-gap: 5px;
+}
+.news{
+    flex: 1;
+}
+.news-title, .gallery-title{
+    font-size: 1rem;
+    border-bottom: 2px solid #f4a460;
+    padding: 2px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.news-text{
+    font-size: .725rem;
+    letter-spacing: 0px;
+    list-style: disc inside;
+}
+.news-text li{
+    margin: .5rem 0;
+}
+/* news */
+.gallery{
+    flex: 1;
+}
+.gallery img{
+    width: 100%;
+}
+.gallery a{
+    opacity: 50%;
+}
+.gallery ul > li > a:hover{
+    transition: all ease-in-out .3s;
+    opacity: 100%;
+}
+
+.gallery > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery > ul > li{
+    margin: 5px;
+}
+
+/* gallery */
+.banner{
+    flex: 1;
+}
+.footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background: url("../images/line.png") top repeat-x;
+}
+.logo2{
+    flex:1.5;
+    margin-right: 10px;
+}
+.info{
+    flex:8.5;
+}
+.bottom-nav > ul{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: .825rem;
+    padding: 2px;
+    width: 400px;
+    color: rgb(94, 93, 93);
+}
+.copy{
+    font-size: .7rem;
+    color: rgb(138, 138, 138);
+}
