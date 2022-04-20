@@ -1,0 +1,13 @@
+@charset "utf-8";
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font: 16px/15 dotum,gulim;
+    color: #333;
+    background: #fff;
+}

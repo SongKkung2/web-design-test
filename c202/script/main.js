@@ -5,6 +5,8 @@ $(function(){
     menu();
     //3.slide
     let intervalID = setInterval(slide, 3000)
+
+    site();
 });
 //팝업 
 function popup(){
@@ -35,4 +37,12 @@ function slide(){
     }
     currentSlide.removeClass("top");
     nextSlide.addClass("top");
+}
+function site(){
+    $("#site").change(function(){
+        // location.href = $(this).val();
+        let url = $(this).val();
+        
+        window.open(url,"new window");
+    })
 }
