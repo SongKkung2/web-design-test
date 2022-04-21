@@ -85,7 +85,8 @@ a, a:link{
 }
 .logo{
     width: 200px;
-    height: 50px;
+    height: 100px;
+    text-align: center;
 }
 #gnb{
     text-align: center;
@@ -111,6 +112,11 @@ a, a:link{
 }
 .slide{
     height: 350px;
+    overflow: hidden;
+    font-size: 0;
+}
+.slides{
+    display: flex;
 }
 .contents{
     height: 200px;
@@ -154,6 +160,7 @@ a, a:link{
     height: 100px;
     display: flex;
     align-items: center;
+    background: url(../images/line.png) top repeat-x;
 }
 .logo2{
     flex: 2;
