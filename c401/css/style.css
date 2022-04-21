@@ -1,0 +1,167 @@
+@charset "utf-8";
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 16px/1.5 dotum, gulim;
+    background: #fff;
+    color: #333;
+}
+ul, ol{
+    list-style: none;
+}
+a, a:link{
+    text-decoration: none;
+    color: inherit;
+}
+.d-none{
+    display: none;
+}
+#modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .8);
+}
+.popup{
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+.popup h2 {
+    text-align: center;
+    color: #746ddb;
+    font-weight: bold;
+}
+.popup h3 {
+    text-align: center;
+    color: #4c44b8;
+    margin: 1rem;
+}
+.popup ul li{
+    margin-bottom: 1rem;
+}
+.popup p{
+    font-size: .825rem;
+}
+.popup button{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    border: 0;
+    background-color: #746ddb;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: .3rem 1rem;
+}
+.wrap{
+    width: 1000px;
+    height: 650px;
+    overflow: hidden;
+    display: flex;
+}
+.left{
+    flex: 1;
+    /* float: left; */
+
+}
+.right{
+    flex: 4;
+    /* float: right; */
+}
+.header{
+    width: 200px;
+    overflow: hidden;
+}
+.logo{
+    width: 200px;
+    height: 50px;
+}
+#gnb{
+    text-align: center;
+}
+#gnb li {
+    width: 200;
+    height: 50px;
+}
+#gnb > li a{
+    display: block;
+    padding: 10px 0;
+}
+.lnb{
+    display: none;
+}
+.lnb li {
+    width: 200;
+    height: 50px;
+}
+.lnb > li a{
+    display: block;
+    padding: 10px 0;
+}
+.slide{
+    height: 350px;
+}
+.contents{
+    height: 200px;
+    display: flex;
+    column-gap: 10px;
+    overflow: hidden;
+}
+.news{
+    flex: 1;
+}
+.news ul{
+    font-size: .8rem;
+}
+.news ul li {
+    margin: .5em 0;
+}
+.news-title, .gallery-title{
+    border-bottom: 2px solid #746ddb;
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding: .5rem 1rem;
+}
+.gallery{
+    flex: 1;
+    /* align-items: */
+}
+.gallery ul{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.gallery img{
+    width: 100%;
+}
+.shorcut{
+    flex: 1;
+}
+.footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.logo2{
+    flex: 2;
+}
+.copy{
+    flex: 6;
+    font-size: .825rem;
+}
+.family{
+    flex: 2;
+}

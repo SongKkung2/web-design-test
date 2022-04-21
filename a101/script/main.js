@@ -7,6 +7,8 @@ $(function(){
     //슬라이드
     let intervalID = setInterval(carousel,3000)
     carousel();
+    //메뉴
+    mainNav();
 })
 function modal() {
     $(".news li:eq(0)").click(function(){
@@ -41,4 +43,24 @@ function carousel(){
     });
     i++;
     
+}
+function mainNav(){
+    // 메인 내비게이션 항목에 마우스가 닿으면 서브 메뉴를 모두 or 하나만 ? 펼친다.
+    // 모두 > lnb 전체가 펼쳐지기
+    // 개인 > 해당 lnb 만 펼쳐지기
+    $("#gnb > li").mouseenter(function(){
+        $(this).children("a").addClass("on")
+        $(".lnb").stop().slideDown();
+    })
+        //$(this).children(".lnb") > 하나만
+    $("#gnb > li").mouseleave(function(){
+        $(this).children("a").removeClass("on")
+        $(".lnb").stop().slideUp();
+    })
+    $(".lnb > li").mouseenter(function(){
+        $(this).children("a").addClass("sub")
+    })
+    $(".lnb > li").mouseleave(function(){
+        $(this).children("a").removeClass("sub")
+    })
 }

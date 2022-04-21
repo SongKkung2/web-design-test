@@ -68,6 +68,18 @@ ul, ol{
     width: 200px;
     height: 40px;
 }
+.on{
+    background:#865ace;
+    color: white;
+    font-weight: bold;
+}
+.sub{
+    background:linear-gradient(to right, rgb(247, 48, 220), #865ace);
+   
+    /* background-color: #ad89e7; */
+    color: white;
+    font-weight: bold;
+}
 #gnb {
     width: 640px;
     display: flex;
@@ -93,9 +105,14 @@ ul, ol{
     width: 100%;
     text-align: center;
     display: none;
+    box-shadow: 0 9px 5px rgba(0, 0, 0, .5);
 }
-.lnb > li {
-    padding: 10px 0;
+
+.lnb >  li > a{
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
 }
 /* header */
 .slide{
