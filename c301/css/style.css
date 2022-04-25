@@ -73,11 +73,51 @@ body{
 .logo img{
     width: 100%;
 }
+.nav{
+    position: relative;
+}
+.active{
+    background-color: #f4a460;
+    color: #fff;
+}
 .gnb{
     text-align: center;
 }
+.gnb > li{
+    height: 50px;
+    width: 200px;
+}
+.gnb > li > a{
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    display: block;
+}
+.gnb > li.active > a{
+    color: white;
+}
 .lnb{
     display: none;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    z-index: 1 ;
+    background-color: #f4a460;
+    color: white;
+}
+.lnb > li{
+    width: 200px;
+    height: 50px;
+}
+.lnb > li > a{
+    display: block;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+}
+.lnb > li > a:hover{
+    background-color: #946338;
+    color: white;
 }
 /* header */
 .right{

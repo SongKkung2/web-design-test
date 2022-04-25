@@ -77,42 +77,68 @@ a, a:link{
     /* float: left; */
 
 }
-.right{
-    flex: 4;
-    /* float: right; */
-}
+
 .header{
     width: 200px;
-    overflow: hidden;
 }
 .logo{
     width: 200px;
     height: 100px;
     text-align: center;
 }
+.nav{
+    position: relative;
+}
 #gnb{
     text-align: center;
 }
-#gnb li {
+#gnb > li {
     width: 200px;
     height: 50px;
 }
-#gnb > li a{
+#gnb > li >a{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
     display: block;
-    padding: 10px 0;
 }
+.active{
+    background: #746ddb;
+    color: white;
+}
+#gnb > li.active > a{
+    color: white;
+}
+
 .lnb{
     display: none;
+    position: absolute;
+    background-color: #746ddb;
+    color: #fff;
+    top: 0;
+    right: -200px;
+    z-index: 100;
 }
 .lnb > li {
     width: 200px;
     height: 50px;
 }
-.lnb > li a{
+.lnb > li > a{
     display: block;
-    padding: 10px 0;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+}
+.lnb > li > a:hover{
+    color: white;
+    background: #4c44b8;
+}
+.right{
+    flex: 4;
+    /* float: right; */
 }
 .slide{
+    z-index: 0;
     overflow: hidden;
     height: 350px;
     width: 800px;

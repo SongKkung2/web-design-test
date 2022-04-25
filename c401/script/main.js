@@ -5,6 +5,7 @@ $(function(){
     // 슬라이드
     let intervalID = setInterval(slide , 3000)
     // 메뉴
+    menu();
 })
 function modal(){
     $(".news ul li:eq(0)").click(function(){
@@ -24,4 +25,18 @@ function slide(){
     });
     i++;
     
+}
+function menu(){
+    $("#gnb li").mouseenter(function(){
+        if(!$(this).hasClass("active"))$(this).addClass("active");
+        $(this).children(".lnb").stop().slideDown();
+        let Pos = $(this).index();
+        $(this).children(".lnb").css({
+            top : 50 * Pos
+        })
+    })
+    $("#gnb li").mouseleave(function(){
+        $(this).removeClass("active");
+        $(this).children(".lnb").stop().slideUp();
+    })
 }
