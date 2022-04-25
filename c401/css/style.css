@@ -9,6 +9,7 @@ body{
     font: 16px/1.5 dotum, gulim;
     background: #fff;
     color: #333;
+    box-sizing: border-box;
 }
 ul, ol{
     list-style: none;
@@ -24,7 +25,7 @@ a, a:link{
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, .8);
 }
 .popup{
@@ -36,6 +37,7 @@ a, a:link{
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
+    z-index: 10000;
 }
 .popup h2 {
     text-align: center;
@@ -92,7 +94,7 @@ a, a:link{
     text-align: center;
 }
 #gnb li {
-    width: 200;
+    width: 200px;
     height: 50px;
 }
 #gnb > li a{
@@ -102,8 +104,8 @@ a, a:link{
 .lnb{
     display: none;
 }
-.lnb li {
-    width: 200;
+.lnb > li {
+    width: 200px;
     height: 50px;
 }
 .lnb > li a{
@@ -111,26 +113,32 @@ a, a:link{
     padding: 10px 0;
 }
 .slide{
-    height: 350px;
     overflow: hidden;
+    height: 350px;
+    width: 800px;
     font-size: 0;
 }
-.slides{
+#slides{
     display: flex;
+    transition: all ease-in-out .3s;
+}
+#slides > a{
+    display: block;
 }
 .contents{
     height: 200px;
+    width: 800px;
     display: flex;
     column-gap: 10px;
     overflow: hidden;
 }
 .news{
-    flex: 1;
+   flex: 1;
 }
-.news ul{
+.news > ul{
     font-size: .8rem;
 }
-.news ul li {
+.news > ul > li {
     margin: .5em 0;
 }
 .news-title, .gallery-title{
@@ -141,18 +149,27 @@ a, a:link{
 }
 .gallery{
     flex: 1;
-    /* align-items: */
-}
-.gallery ul{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 10px;
 }
 .gallery img{
     width: 100%;
 }
+.gallery a{
+    opacity: 50%;
+}
+.gallery ul > li > a:hover{
+    transition: all ease-in-out .3s;
+    opacity: 100%;
+}
+
+.gallery > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery > ul > li{
+    margin: 5px;
+}
+
 .shorcut{
     flex: 1;
 }
