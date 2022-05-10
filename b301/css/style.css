@@ -67,6 +67,13 @@ a{
     height: 100px;
     align-items: center;
 }
+.logo{
+    width: 200px;
+    height: 45px;
+}
+.logo img{
+    width: 100%;
+}
 .gnb{
     display: flex;
 }
