@@ -89,9 +89,11 @@ body{
     width: 1200px;
     height: 300px;
     margin: 0 auto;
+    overflow: hidden;
     position: relative;
 }
 .items li{
+    transition: all ease-in-out .3s;
     position: absolute;
     transform: translate(-50% , -50%);
     top: 50%;

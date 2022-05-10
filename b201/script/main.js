@@ -4,7 +4,7 @@ $(function(){
     // 모달
     modal();
     // 슬라이드
-    let intervalID = setInterval(slide , 3000)
+    let intervalID = setInterval(slide , 2500)
 })
 
 function modal(){
@@ -15,19 +15,31 @@ function modal(){
         $("#modal").hide();
     })
 }
-i = 0;
+let i = 0;
 function slide(){
-    if(i >= 3 ){
-        i = 0;
-    };
-    Pos = -300*i
-    $("#items").css({
-        marginTop: Pos
+    // if(i >= 3 ){
+    //     i = 0;
+    // };
+    // Pos = -300*i
+    // $("#items").css({
+    //     marginTop: Pos
+    // });
+    // i++;
+    if(i>=3){
+        i=0
+    }
+    let Pos = -300*i
+    $("#items").animate({
+        marginTop : Pos
     });
     i++;
 }
 function menu(){
     $("#gnb > li").mouseenter(function(){
+        // let index = $(this).index();
+        // $(".header-bg").css({
+        //     backgound : URL('../images/lineart0.png')
+        // })
         if(!$(this).hasClass("active"))$(this).addClass("active")
         $(".header-bg").stop().animate({
             height: 200
